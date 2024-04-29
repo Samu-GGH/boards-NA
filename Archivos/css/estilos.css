@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Ds-Digital';
+    src: url('../DS-DIGI.ttf');
+}
+
+.digital{
+	font-family: Ds-Digital;
+}
+
+body{
+	background-color: #333;
+}
+
+.tablero-container{
+	position: relative;
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	justify-content: space-evenly;
+	align-content: center;
+
+}
+
+.score-container, .fouls-container{
+	display: inline-flex;
+	position: relative;
+	height: 50%;
+	padding: 10px;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+}
+
+.score-team-section, .score-timer-section, .fouls-team-section, .shot-timer-section{
+	display: flex;
+	position: relative;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.period-container{
+	display: inline-flex;
+	position: relative;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+
+.team-name{
+	font-size: 60px;
+	color: #fff;
+	margin: 0;
+	text-align: center;
+}
+
+.periodo-name{
+	display: inline-flex;
+	position: relative;
+	font-size: 50px;
+	color: #fff;
+	margin: 0;
+	align-self: center;
+}
+
+.period-box{
+	position: relative;
+	display: inline-flex;
+	height: 60%;
+	background-color: #222;
+	color: #ff0000;
+	font-size: 80px;
+	margin: 0 20px;
+	border: 3px solid #fff;
+	justify-content: center;
+	align-self: center;
+	cursor: pointer;
+}
+
+.score-box, .foul-box{
+	position: relative;
+	display: inline-flex;
+	height: 47%;
+	background-color: #222;
+	color: #ff0000;
+	border: 3px solid #fff;
+	font-size: 170px;
+	justify-content: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.timer-box,.shot-box{
+	height: 50%;
+	font-size: 170px;
+}
+
+.shot-box{
+	align-self: center;
+	transform: translateY(-10%);
+}
+
+.foul-box{
+	color: #f30;
+}
+
+.score, .timer, .period, .shot-timer{
+ 	position: relative;
+ 	display: inline-flex;
+ 	align-self: center;
+ 	justify-content: center;
+}
+
+.TO-container-L,.TO-container-V{
+	display: inline-flex;
+	position: absolute;
+	height: 60%;
+	bottom: 5%;
+	background-color: #222;
+	color: #fff;
+	border: 3px solid #fff;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.TO-container-L{
+	right: 0;
+}
+.TO-container-V{
+	left: 0;
+}
+
+.time-out{
+	display: none;
+}
+
+input[type=checkbox] + label:before{
+	content: "X";
+	display: block;
+	position: relative;
+	border-radius: 3px;
+	height: 50px;
+	width: 40px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #f30;
+	border: 2px solid #f30;
+	text-align: center;
+	transition: .2s ease;
+}
+
+input[type=checkbox]:checked + label:before{
+	content: "T";
+	background-color: #f30;
+	color: #222;
+	border: 0px;
+}
+
+::selection{ 
+	color: inherit;  
+	background: none; 
+}

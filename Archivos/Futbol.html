@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+	<html lang="es">
+		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta charset="UTF-8">
+			<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+			<link rel="stylesheet" type="text/css" href="css/estiliphos.css">
+			<title>Tablero de Futbol</title>
+		</head>
+		<body>
+			<div id="tablero" class="tablero-container col-12">
+				<div id="score-container" class="score-container col-12">
+					<div class="score-team-section col-5">
+						<p class="team-name col-10">LOCAL</p>
+						<div id="score-local" class="score-box col-7">
+							<span id="goles-l" class="score digital">0</span>
+						</div>
+						<div id="TO-local" class="TO-container-L col-2">
+							<input type="checkbox" id="TO-local-1" class="time-out" checked>
+							<label for="TO-local-1"></label>
+							<input type="checkbox" id="TO-local-2" class="time-out" checked>
+							<label for="TO-local-2"></label>
+							<input type="checkbox" id="TO-local-3" class="time-out" checked>
+							<label for="TO-local-3"></label>
+						</div>
+					</div>	
+					<div class="score-team-section col-5">
+						<p class="team-name col-10">VISITANTE</p>
+						<div id="TO-Visit" class="TO-container-V col-2">
+							<input type="checkbox" id="TO-visit-1" class="time-out" checked>
+							<label for="TO-visit-1"></label>
+							<input type="checkbox" id="TO-visit-2" class="time-out" checked>
+							<label for="TO-visit-2"></label>
+							<input type="checkbox" id="TO-visit-3" class="time-out" checked>
+							<label for="TO-visit-3"></label>
+						</div>
+						<div id="score-visit" class="score-box col-7">
+							<span id="goles-v" class="score digital">0</span>
+						</div>
+					</div>
+				</div>
+				<div class="timer-container col-12">
+					<div class="score-timer-section col-10">
+						<div id="timer" class="score-box timer-box col-7">
+							<span id="tiempo-min" class="timer digital col-5">0</span>
+							<span id="divisor" class="timer digital col-2">:</span>
+							<span id="tiempo-seg" class="timer digital col-5">00</span>
+						</div>	
+						<div id="TE-container" class="T-E score-box">
+							<span id="tiempo-extra" class="exTime timer digital"></span>
+						</div>
+					</div>
+				</div>	
+			<script src="js/futbol.js"></script>
+			</div>
+		</body>
+	</html>

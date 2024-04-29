@@ -1,0 +1,254 @@
+@font-face {
+    font-family: 'Ds-Digital';
+    src: url('../DS-DIGI.ttf');
+}
+
+.digital{
+	font-family: Ds-Digital;
+}
+
+body{
+	background-color: #333;
+}
+
+.tablero-container{
+	position: relative;
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	justify-content: space-evenly;
+	align-content: center;
+	overflow: hidden;
+}
+
+.score-container{
+	display: inline-flex;
+	position: relative;
+	height: 80%;
+	padding: 10px;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.inn-container{
+	display: inline-flex;
+	position: relative;
+	height: 10%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.inn-indicador, .stadistic-indicador{
+	display: inline-flex;
+	position: relative;
+	justify-content: space-evenly;
+	font-size: 50px;
+	color: #fff;
+}
+
+.inn{
+	display: inline-block;
+	position: relative;
+	text-align: center;
+}
+
+.score-team-section{
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	height: 40%;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.team-name{
+	font-size: 35px;
+	color: #fff;
+	margin: 0;
+	text-align: center;
+	align-self: center;
+}
+
+.inn-name, .carreras, .hits, .errores{
+	font-size: 50px;
+	color: #fff;
+	margin: 0;
+	text-align: center;
+	align-self: center;
+}
+
+
+.score-box{
+	position: relative;
+	display: inline-flex;
+	height: 65%;
+	background-color: #000;
+	color: #f00;
+	border: 3px solid #fff;
+	font-size: 100px;
+	justify-content: space-evenly;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.score, .inn-num{
+ 	position: relative;
+ 	display: inline-flex;
+ 	background-color: #222;
+ 	align-self: center;
+ 	justify-content: center;
+}
+
+.carreras-v, .hits-v, .errores-v, .carreras-l, .hits-l, .errores-l{
+	outline: 3px solid #000;
+}
+
+.carrera-v, .carrera-l{
+	width: 10%;
+}
+
+.info-container{
+	display: inline-flex;
+	position: relative;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	height: 20%
+}
+
+.SOB-container{
+	display: inline-flex;
+	position: relative;
+	flex-wrap: wrap;
+}
+
+.SOB-name-container{
+	display: inline-flex;
+	position: relative;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: nowrap;
+	height: 40%;
+}
+
+.SOB-name{
+	text-align: center;
+	display: inline-block;
+	font-size: 30px;
+	color: silver;
+}
+
+.SOB{
+	display: inline-flex;
+	position: relative;
+	height: 60%;
+	padding: 10px;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+}
+
+.SOB-indicadores{
+	display: inline-flex;
+	position: relative;
+	height: 90%;
+	border-radius: 50px;
+	border: 3px solid #fff;
+	background-color: #222;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#balls, #strikes{
+	transform: translateX(-20px);
+}
+
+.score-inn-section{
+	display: inline-flex;
+	position: relative;
+	justify-content: space-evenly;
+	height: 100%;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.inn-num-container{
+	display: inline-flex;
+	position: relative;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+
+.inn-box{
+	position: relative;
+	display: inline-flex;
+	background-color: #222;
+	color: #f00;
+	height: 100px;
+	margin: 0 20px;
+	border: 3px solid #fff;
+	justify-content: center;
+	align-self: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.inn-num{
+	font-size: 100px;
+}
+
+.inn-arrow-container{
+	display: inline-flex;
+	position: relative;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.inn-arrow{
+	display: inline-block;
+	position: relative;
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+	transition: .3s ease;
+}
+
+.inn-alto{
+	clip-path: polygon(50% 0, 100% 100%, 0 100%);
+	background-color: #f00;
+}
+
+.inn-bajo{
+	clip-path: polygon(0 0, 100% 0, 50% 100%);
+	background-color: #000;
+}
+
+input[type=checkbox]{
+	display: none;
+}
+
+input[type=checkbox] + label:before{
+	content: "";
+	display: block;
+	position: relative;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	margin: 3px;
+	border: 2px solid #fff;
+	transition: .2s ease;
+}
+
+.bola:checked + label:before{
+	background-color: #050;
+}
+.strike:checked + label:before{
+	background-color: #ff0;
+}
+.out:checked + label:before{
+	background-color: #f00;
+}
+
+::selection{ 
+	color: inherit;  
+	background: none; 
+}
